@@ -11,8 +11,7 @@ public class Respawn : MonoBehaviour {
 	private GameObject gracz2;
 	private Vector3 pozycja1 = new Vector3 (16f,1.3f,-21f);
 	private Vector3 pozycja2 = new Vector3 (25f,1.3f,-21f);
-	private Quaternion rotacja1 = new Quaternion (0, 0, 0, 0);
-	private Quaternion rotacja2 = new Quaternion (0, 0, 0, 0);
+
 	// Use this for initialization
 	void Start () {
 		gracz1 = GameObject.Find ("Gracz1");
@@ -38,13 +37,11 @@ public class Respawn : MonoBehaviour {
 		{
 			pozycja1 = new Vector3 (gracz1.transform.position.x,2f,gracz1.transform.position.z);
 
-			rotacja1 = gracz1.transform.rotation;
 		}
 		if (gracz2.GetComponent<SterowanieGracz2>().naTrasie) 
 		{
 			pozycja2 = new Vector3 (gracz2.transform.position.x,2f,gracz2.transform.position.z);
 
-			rotacja2 = gracz2.transform.rotation;
 		}
 
 		yield return new WaitForSeconds (3);

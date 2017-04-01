@@ -23,7 +23,7 @@ public class Generator : MonoBehaviour {
 
 	void Start () 
 	{
-		GameObject segment = Instantiate (segmenty [Random.Range (0, segmenty.Count - 1)], pozycja, rotacja) as GameObject;
+		Instantiate (segmenty [Random.Range (0, segmenty.Count - 1)], pozycja, rotacja);
 
 		Generuj ();
 

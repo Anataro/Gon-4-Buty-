@@ -27,7 +27,6 @@ public class SterowanieGracz2 : MonoBehaviour {
 		if (start == true) {
 			MoveCharacter ();
 			RotateCharacter ();
-			SpeedoMeter ();
 		}
 
 		transform.eulerAngles= new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,0); //Chleb nie może się przewrócić na boki.
@@ -49,7 +48,7 @@ public class SterowanieGracz2 : MonoBehaviour {
 			//Przyspieszanie do tyłu.
 			if (speed > MinSpeed)
 			{
-				speed -= 0.2f;
+				speed -= 0.5f;
 			}
 		}
 		//Jeżeli gracz nie klika ani strzałki w górę ani strzałki w dół.
@@ -114,9 +113,5 @@ public class SterowanieGracz2 : MonoBehaviour {
 
 		if (other.tag == "Trasa")
 			naTrasie = true;
-	}
-	void SpeedoMeter()
-	{
-		SpeedometerGracz2.ShowSpeed (speed, 0, 30);
 	}
 }
