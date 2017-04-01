@@ -9,6 +9,7 @@ TagManager:
   - "Mas\u0142o"
   - Trasa
   - Przeszkoda
+  - Przedmiot
   layers:
   - Default
   - TransparentFX
