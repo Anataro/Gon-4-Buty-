@@ -17,7 +17,7 @@ public class Respawn2 : MonoBehaviour {
 		gracz2 = GameObject.Find ("Gracz2");
 	}
 
-	void OnTriggerEnter (Collider other){
+	void OnCollisionEnter (Collision other){
 		if (other.gameObject.tag == "Gracz1") 
 				Resp (gracz1, 1);
 

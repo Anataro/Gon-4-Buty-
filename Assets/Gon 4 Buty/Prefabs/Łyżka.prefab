@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 64793508240899498}
   - component: {fileID: 54451382579977682}
   m_Layer: 0
-  m_Name: "\u0141y\u017Cka (1)"
+  m_Name: "\u0141y\u017Cka"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,9 +36,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1672326455882292}
-  m_LocalRotation: {x: -0.70259255, y: -0.07977293, z: 0.07977293, w: 0.70259255}
-  m_LocalPosition: {x: -17.033, y: 13.38, z: -20.26}
-  m_LocalScale: {x: 26.589579, y: 26.589565, z: 26.589565}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
