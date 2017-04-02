@@ -22,10 +22,8 @@ GameObject:
   - component: {fileID: 33615687715535710}
   - component: {fileID: 23884248949164720}
   - component: {fileID: 54371163754404626}
-  - component: {fileID: 136212406080806660}
-  - component: {fileID: 65634695002767566}
-  - component: {fileID: 65849298219657962}
   - component: {fileID: 114378564444027842}
+  - component: {fileID: 65064813875166540}
   m_Layer: 0
   m_Name: Kieliszek Wina
   m_TagString: Przedmiot
@@ -40,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1711484103112948}
   m_LocalRotation: {x: 0.000000057601163, y: -0.7071068, z: 0.000000057601163, w: 0.7071068}
-  m_LocalPosition: {x: -18.66, y: 14.961253, z: 19.81}
+  m_LocalPosition: {x: 4.3980265, y: 17.226658, z: -54.6604}
   m_LocalScale: {x: 6.3572407, y: 6.357229, z: 6.3572307}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +98,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65634695002767566
+--- !u!65 &65064813875166540
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -110,20 +108,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.59, z: 0.07}
-  m_Center: {x: 0.19800746, y: -0.3, z: -0.00000004470348}
---- !u!65 &65849298219657962
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711484103112948}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.72, y: 0.08, z: 0.7255706}
-  m_Center: {x: 0.19800746, y: -0.62, z: -0.00000004470348}
+  m_Size: {x: 0.72557086, y: 1.5308483, z: 0.72557086}
+  m_Center: {x: 0.19800751, y: 0.10127887, z: -0.000000044703494}
 --- !u!114 &114378564444027842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,16 +126,3 @@ MonoBehaviour:
   gracz1Dotyka: 0
   gracz2Dotyka: 0
   numerek: 0
---- !u!136 &136212406080806660
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711484103112948}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36278534
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0.19800746, y: 0.49, z: -0.00000004470348}
