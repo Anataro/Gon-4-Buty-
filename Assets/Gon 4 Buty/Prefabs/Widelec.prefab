@@ -109,5 +109,5 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 1
-  m_SkinWidth: 0.22
+  m_SkinWidth: 0.2
   m_Mesh: {fileID: 4300000, guid: a97db0e47c9025942a09199d481f8005, type: 3}
