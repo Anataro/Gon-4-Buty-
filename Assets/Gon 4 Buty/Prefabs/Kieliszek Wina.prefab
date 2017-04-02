@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 136212406080806660}
   - component: {fileID: 65634695002767566}
   - component: {fileID: 65849298219657962}
+  - component: {fileID: 114378564444027842}
   m_Layer: 0
   m_Name: Kieliszek Wina
   m_TagString: Untagged
@@ -109,7 +110,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: -0.05, y: 0.59, z: 0.07}
+  m_Size: {x: 0.05, y: 0.59, z: 0.07}
   m_Center: {x: 0.19800746, y: -0.3, z: -0.00000004470348}
 --- !u!65 &65849298219657962
 BoxCollider:
@@ -123,6 +124,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.05, z: 0.7255706}
   m_Center: {x: 0.19800746, y: -0.63, z: -0.00000004470348}
+--- !u!114 &114378564444027842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1711484103112948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e50142ecabe26488cb77e1ba7a5412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "dotkn\u0105\u0142Gracz1": 0
+  "dotkn\u0105\u0142Gracz2": 0
+  numerek: 0
 --- !u!136 &136212406080806660
 CapsuleCollider:
   m_ObjectHideFlags: 1

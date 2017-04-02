@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 65782469076138076}
   - component: {fileID: 65118499953859194}
   - component: {fileID: 65520765244596036}
+  - component: {fileID: 114257210439206530}
   m_Layer: 0
   m_Name: Talerz2
   m_TagString: Untagged
@@ -135,7 +136,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.5, y: 1.5186853, z: -1.1}
+  m_Size: {x: 7.5, y: 1.5186853, z: 1.1}
   m_Center: {x: 4.141756, y: -0.006745875, z: 6.5}
 --- !u!65 &65733505713525150
 BoxCollider:
@@ -161,3 +162,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7, y: 1.5186853, z: 7.9}
   m_Center: {x: 9.35, y: -0.006745875, z: 0}
+--- !u!114 &114257210439206530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522612815637544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2e50142ecabe26488cb77e1ba7a5412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "dotkn\u0105\u0142Gracz1": 0
+  "dotkn\u0105\u0142Gracz2": 0
+  numerek: 0

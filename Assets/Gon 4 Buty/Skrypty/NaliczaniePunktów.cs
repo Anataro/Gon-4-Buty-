@@ -5,19 +5,22 @@ using UnityEngine;
 public class NaliczaniePunktów : MonoBehaviour {
 	public GUIText iloscPunktow1, iloscPunktow2;
 	public int punkty1, punkty2;
-	private KtoDotknął ktoDotknąłSkrypt;
-
-	private int numerowanie = 1;
+	public int[] tablicaNumerków;
+	public KtoDotknął[] skrypty;
 
 	void Start (){
 		punkty1 = 0;
 		punkty2 = 0;
 
-		/*GameObject[] przedmioty = GameObject.FindGameObjectsWithTag ("Przedmiot");
-		foreach (GameObject przedmiot in przedmioty) {
-			GetComponent<KtoDotknął> ().numerek = numerowanie;
-			numerowanie++;
-		}*/
+		tablicaNumerków = new int[GameObject.FindGameObjectsWithTag ("Przedmiot").Length];
+
+		skrypty = Object.FindObjectsOfType (typeof(KtoDotknął)) as KtoDotknął[];
+		GameObject.FindGameObjectsWithTag ("Przedmiot");
+		for (int i = 0; i < tablicaNumerków.Length; i++){
+			tablicaNumerków [i] = skrypty [i].numerek;
+		}
+
+
 	}
 
 	void Update (){
