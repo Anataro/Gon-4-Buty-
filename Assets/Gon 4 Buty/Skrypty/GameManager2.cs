@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameManager2 : MonoBehaviour {
 	public GUIText wyścigStart;
 	public GUIText koniec;
+	private NaliczaniePunktów naliczaniePunktówSkrypt;
+	private int punktyŻebyWygrać;
 
 
 	public GameObject gracz1p;
@@ -22,6 +24,11 @@ public class GameManager2 : MonoBehaviour {
 	void Start(){
 		StartCoroutine (Odliczanie ());
 
+		GameObject objekt = GameObject.Find ("GameManager");
+		naliczaniePunktówSkrypt = objekt.GetComponent<NaliczaniePunktów> ();
+
+		punktyŻebyWygrać = (GameObject.FindGameObjectsWithTag ("Przedmiot").Length / 2) -1;
+
 	}
 
 	void Update () {
@@ -32,16 +39,16 @@ public class GameManager2 : MonoBehaviour {
 			Application.Quit ();
 		}
 
-		/*if(GameObject.Find ("LiniaMety").GetComponent<CzyKtosWygral> ().WygralGracz1 == true){
+		if(naliczaniePunktówSkrypt.punkty1 >= punktyŻebyWygrać){
 			koniec.text = "Wygrał gracz 1!";
 			gracz1.GetComponent<SterowanieGracz1> ().start = false;
 			gracz2.GetComponent<SterowanieGracz2> ().start = false;
 		}
-		if(GameObject.Find ("LiniaMety").GetComponent<CzyKtosWygral> ().WygralGracz2 == true){
+		if(naliczaniePunktówSkrypt.punkty2 >= punktyŻebyWygrać){
 			koniec.text = "Wygrał gracz 2!";
 			gracz1.GetComponent<SterowanieGracz1> ().start = false;
 			gracz2.GetComponent<SterowanieGracz2> ().start = false;
-		}*/
+		}
 	}
 
 

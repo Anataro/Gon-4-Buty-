@@ -44,14 +44,13 @@ public class KtoDotknął : MonoBehaviour {
 
 
 		if (other.gameObject.tag == "Respawner") {
+			Destroy (gameObject);
 			if (dotknąłGracz1 == true) {
 				naliczaniePunktówSkrypt.punkty1 = naliczaniePunktówSkrypt.punkty1 + 1;
-				Destroy (gameObject);
 			}
 
 			if (dotknąłGracz2 == true) {
 				naliczaniePunktówSkrypt.punkty2 = naliczaniePunktówSkrypt.punkty2 + 1;
-				Destroy (gameObject);
 			}
 		}
 
@@ -66,6 +65,16 @@ public class KtoDotknął : MonoBehaviour {
 					}
 
 					if (gracz2Dotyka == true) {
+						other.gameObject.GetComponent<KtoDotknął> ().dotknąłGracz1 = false;
+						other.gameObject.GetComponent<KtoDotknął> ().dotknąłGracz2 = true;
+					}
+
+					if (dotknąłGracz1 == true) {
+						other.gameObject.GetComponent<KtoDotknął> ().dotknąłGracz1 = true;
+						other.gameObject.GetComponent<KtoDotknął> ().dotknąłGracz2 = false;
+					}
+
+					if (dotknąłGracz2 == true) {
 						other.gameObject.GetComponent<KtoDotknął> ().dotknąłGracz1 = false;
 						other.gameObject.GetComponent<KtoDotknął> ().dotknąłGracz2 = true;
 					}
