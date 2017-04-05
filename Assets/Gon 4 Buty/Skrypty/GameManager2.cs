@@ -27,7 +27,7 @@ public class GameManager2 : MonoBehaviour {
 		GameObject objekt = GameObject.Find ("GameManager");
 		naliczaniePunktówSkrypt = objekt.GetComponent<NaliczaniePunktów> ();
 
-		punktyŻebyWygrać = (GameObject.FindGameObjectsWithTag ("Przedmiot").Length / 2) -1;
+		punktyŻebyWygrać = (Mathf.RoundToInt (GameObject.FindGameObjectsWithTag ("Przedmiot").Length / 2));
 
 	}
 

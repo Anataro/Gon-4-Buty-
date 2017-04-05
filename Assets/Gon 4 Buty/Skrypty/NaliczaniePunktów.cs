@@ -7,12 +7,14 @@ public class NaliczaniePunktów : MonoBehaviour {
 	public int punkty1, punkty2;
 	public int[] tablicaNumerków;
 	public KtoDotknął[] skrypty;
+	private int punktyŻebyWygrać;
 
 	void Start (){
 		punkty1 = 0;
 		punkty2 = 0;
 
 		tablicaNumerków = new int[GameObject.FindGameObjectsWithTag ("Przedmiot").Length];
+		punktyŻebyWygrać = (Mathf.RoundToInt (GameObject.FindGameObjectsWithTag ("Przedmiot").Length / 2));
 
 		skrypty = Object.FindObjectsOfType (typeof(KtoDotknął)) as KtoDotknął[];
 		GameObject.FindGameObjectsWithTag ("Przedmiot");
@@ -24,7 +26,7 @@ public class NaliczaniePunktów : MonoBehaviour {
 	}
 
 	void Update (){
-		iloscPunktow1.text = "Punkty: " + punkty1.ToString ();
-		iloscPunktow2.text = "Punkty: " + punkty2.ToString ();
+		iloscPunktow1.text = "Punkty: " + punkty1.ToString () + "/" + punktyŻebyWygrać.ToString();
+		iloscPunktow2.text = "Punkty: " + punkty2.ToString () + "/" + punktyŻebyWygrać.ToString();
 	}
 }
