@@ -1565,7 +1565,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419597098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13, y: 0.93, z: 0}
+  m_LocalPosition: {x: 0.085, y: 0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1356860437}
@@ -1579,10 +1579,10 @@ GUIText:
   m_GameObject: {fileID: 419597098}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Punkty: 0/22'
+  m_Text: 
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: -100, y: 0}
+  m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 0}
@@ -5484,7 +5484,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422625941}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.88, y: 0.93, z: 0}
+  m_LocalPosition: {x: 0.915, y: 0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1356860437}
@@ -5498,10 +5498,10 @@ GUIText:
   m_GameObject: {fileID: 1422625941}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Punkty: 0/22'
+  m_Text: 
   m_Anchor: 4
   m_Alignment: 1
-  m_PixelOffset: {x: 80, y: 0}
+  m_PixelOffset: {x: 0, y: 0}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 0}
