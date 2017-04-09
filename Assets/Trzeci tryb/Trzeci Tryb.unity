@@ -191,7 +191,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4351499825466734, guid: 0f624054610db494f8504776ba333a03, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -87.4
+      value: -87
       objectReference: {fileID: 0}
     - target: {fileID: 4351499825466734, guid: 0f624054610db494f8504776ba333a03, type: 2}
       propertyPath: m_LocalRotation.x
@@ -268,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 204674496}
   m_Layer: 0
-  m_Name: tarcza
+  m_Name: Tarcza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,7 +281,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 204674495}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -19.9, y: -32.9, z: 221.9}
+  m_LocalPosition: {x: 0, y: -32.9, z: 221.9}
   m_LocalScale: {x: 148.30334, y: 148.30331, z: 148.30331}
   m_Children:
   - {fileID: 1240126624}
@@ -370,7 +370,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 265306489}
   m_LocalRotation: {x: -0.15918487, y: -0, z: -0, w: 0.98724884}
-  m_LocalPosition: {x: 0.29, y: 22.77, z: 83.35}
+  m_LocalPosition: {x: 0, y: 22.77, z: 83.35}
   m_LocalScale: {x: 2.2413306, y: 2.24133, z: 2.24133}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1596,14 +1596,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18c11ea98cd9134589b49cce898ef55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gracz1p: {fileID: 1843536399246802, guid: 0607f36b37ea57143bab5b7f05492207, type: 2}
-  gracz2p: {fileID: 1243598875220674, guid: 0f624054610db494f8504776ba333a03, type: 2}
-  gracz1X: 0
-  gracz1Y: 27
-  gracz1Z: -150
-  gracz2X: 20
-  gracz2Y: 27
-  gracz2Z: -150
+  gracz1p: {fileID: 1239133976}
+  gracz2p: {fileID: 315309715}
+  gracz1X: -5
+  gracz1Y: 20.5
+  gracz1Z: -87
+  gracz2X: 5
+  gracz2Y: 20.5
+  gracz2Z: -87
 --- !u!1001 &2074017807
 Prefab:
   m_ObjectHideFlags: 0
@@ -1621,7 +1621,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4139920937725312, guid: 0607f36b37ea57143bab5b7f05492207, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -87.4
+      value: -87
       objectReference: {fileID: 0}
     - target: {fileID: 4139920937725312, guid: 0607f36b37ea57143bab5b7f05492207, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1650,7 +1650,12 @@ Prefab:
     - target: {fileID: 114311332525386092, guid: 0607f36b37ea57143bab5b7f05492207,
         type: 2}
       propertyPath: MaxSpeed
-      value: 75
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 54766545776677158, guid: 0607f36b37ea57143bab5b7f05492207,
+        type: 2}
+      propertyPath: m_AngularDrag
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0607f36b37ea57143bab5b7f05492207, type: 2}
