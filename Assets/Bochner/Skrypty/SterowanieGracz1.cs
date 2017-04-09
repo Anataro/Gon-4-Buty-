@@ -39,7 +39,7 @@ public class SterowanieGracz1 : MonoBehaviour {
 			//Przyspieszanie.
 			if (speed < MaxSpeed)
 			{
-				speed += 0.1f;
+				speed += 0.2f;
 			}
 		}
 		//Jeżeli gracz naciśnie S.
