@@ -69,7 +69,10 @@
      <Compile Include="Assets\Drugi Tryb\Skrypty\KtoDotknął.cs" />
      <Compile Include="Assets\Drugi Tryb\Skrypty\NaliczaniePunktów.cs" />
      <Compile Include="Assets\Drugi Tryb\Skrypty\Respawn2.cs" />
-     <Compile Include="Assets\Skrypty\GameManager3.cs" />
+     <Compile Include="Assets\Trzeci tryb\Skrypty\GameManager3.cs" />
+     <Compile Include="Assets\Trzeci tryb\Skrypty\LicznikPunktów1.cs" />
+     <Compile Include="Assets\Trzeci tryb\Skrypty\LicznikPunktów2.cs" />
+     <Compile Include="Assets\Trzeci tryb\Skrypty\ZmianaKamery.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

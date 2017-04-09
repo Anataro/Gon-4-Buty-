@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 public class GameManager3 : MonoBehaviour {
 	public GUIText wyścigStart;
 	public GUIText koniec;
+	public GUIText punkty1, punkty2;
 
 	public GameObject gracz1p;
 	public GameObject gracz2p;
 
 	private GameObject gracz1;
 	private GameObject gracz2;
+
+	public int punktyG1, punktyG2;
 
 	void Awake()
 	{
@@ -29,6 +32,9 @@ public class GameManager3 : MonoBehaviour {
 		if (Input.GetKey (KeyCode.Escape)) {
 			Application.Quit ();
 		}
+
+		punkty1.text = "Punkty:" + punktyG1.ToString ();
+		punkty2.text = "Punkty:" + punktyG2.ToString ();
 	}
 
 

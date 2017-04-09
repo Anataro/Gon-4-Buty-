@@ -8,6 +8,7 @@ public class SterowanieGracz2 : MonoBehaviour {
 	public float SzybkośćObrotu = 200.0f;
 	public bool start = false;
 	public bool naTrasie = true;
+	public bool poruszanie = true;
 
 	void Start () {
 	}
@@ -34,39 +35,35 @@ public class SterowanieGracz2 : MonoBehaviour {
 	//Poruszanie.
 	void MoveCharacter () {
 		//Kiedy gracz naciśnie strzałkę w górę.
-		if (Input.GetKey (KeyCode.UpArrow))
-		{
-			//Przyspieszanie.
-			if (speed < MaxSpeed)
-			{
-				speed += 0.1f;
+		if (poruszanie == true) {
+			if (Input.GetKey (KeyCode.UpArrow)) {
+				//Przyspieszanie.
+				if (speed < MaxSpeed) {
+					speed += 0.2f;
+				}
 			}
-		}
-		//Jeżeli gracz naciśnie strzałkę w dół.
-		if (Input.GetKey (KeyCode.DownArrow))
-		{
-			//Przyspieszanie do tyłu.
-			if (speed > MinSpeed)
-			{
-				speed -= 0.5f;
+			//Jeżeli gracz naciśnie strzałkę w dół.
+			if (Input.GetKey (KeyCode.DownArrow)) {
+				//Przyspieszanie do tyłu.
+				if (speed > MinSpeed) {
+					speed -= 0.5f;
+				}
 			}
-		}
-		//Jeżeli gracz nie klika ani strzałki w górę ani strzałki w dół.
-		if (!Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.DownArrow))
-		{
-			//Zwalnianie.
-			if (speed > 0.0f)
-			{
-				speed -= 0.2f;
+			//Jeżeli gracz nie klika ani strzałki w górę ani strzałki w dół.
+			if (!Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.DownArrow)) {
+				//Zwalnianie.
+				if (speed > 0.0f) {
+					speed -= 0.2f;
+				}
+				if (speed < 0.0f) {
+					speed += 0.2f;
+				}
 			}
-			if (speed < 0.0f){
-			 	speed += 0.2f;}
-		}
 
-		//Zatrzymuje prędkość na 0 przy zwalnianiu.
-		if (speed > -0.05f && speed < 0.05f)
-		{
-			speed = 0.0f;
+			//Zatrzymuje prędkość na 0 przy zwalnianiu.
+			if (speed > -0.05f && speed < 0.05f) {
+				speed = 0.0f;
+			}
 		}
 
 		//Porusza gracza do przodu.

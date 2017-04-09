@@ -8,6 +8,7 @@ public class SterowanieGracz1 : MonoBehaviour {
 	public float SzybkośćObrotu = 80.0f;
 	public bool start = false;
 	public bool naTrasie = true;
+	public bool poruszanie = true;
 
 	void Start () {
 	}
@@ -34,39 +35,35 @@ public class SterowanieGracz1 : MonoBehaviour {
 	//Poruszanie.
 	void MoveCharacter () {
 		//Kiedy gracz naciśnie W.
-		if (Input.GetKey (KeyCode.W))
-		{
-			//Przyspieszanie.
-			if (speed < MaxSpeed)
-			{
-				speed += 0.2f;
+		if (poruszanie == true) {
+			if (Input.GetKey (KeyCode.W)) {
+				//Przyspieszanie.
+				if (speed < MaxSpeed) {
+					speed += 0.2f;
+				}
 			}
-		}
-		//Jeżeli gracz naciśnie S.
-		if (Input.GetKey (KeyCode.S))
-		{
-			//Przyspieszanie do tyłu.
-			if (speed > MinSpeed)
-			{
-				speed -= 0.5f;
+			//Jeżeli gracz naciśnie S.
+			if (Input.GetKey (KeyCode.S)) {
+				//Przyspieszanie do tyłu.
+				if (speed > MinSpeed) {
+					speed -= 0.5f;
+				}
 			}
-		}
-		//Jeżeli gracz nie klika ani W ani S.
-		if (!Input.GetKey (KeyCode.W) && !Input.GetKey (KeyCode.S))
-		{
-			//Zwalnianie.
-			if (speed > 0.0f)
-			{
-				speed -= 0.2f;
+			//Jeżeli gracz nie klika ani W ani S.
+			if (!Input.GetKey (KeyCode.W) && !Input.GetKey (KeyCode.S)) {
+				//Zwalnianie.
+				if (speed > 0.0f) {
+					speed -= 0.2f;
+				}
+				if (speed < 0.0f) {
+					speed += 0.2f;
+				}
 			}
-			if (speed < 0.0f){
-				speed += 0.2f;}
-		}
 
-		//Zatrzymuje prędkość na 0 przy zwalnianiu.
-		if (speed > -0.05f && speed < 0.05f)
-		{
-			speed = 0.0f;
+			//Zatrzymuje prędkość na 0 przy zwalnianiu.
+			if (speed > -0.05f && speed < 0.05f) {
+				speed = 0.0f;
+			}
 		}
 
 		//Porusza gracza do przodu.
