@@ -145,6 +145,3 @@ C:\Users\monak\Documents\GitHub\Gon-4-Buty-\Temp\bin\Debug\UnityEngine.Analytics
 C:\Users\monak\Documents\GitHub\Gon-4-Buty-\Temp\bin\Debug\UnityEngine.HoloLens.xml
 C:\Users\monak\Documents\GitHub\Gon-4-Buty-\Temp\bin\Debug\UnityEngine.VR.xml
 C:\Users\monak\Documents\GitHub\Gon-4-Buty-\obj\Debug\Assembly-CSharp.pdb
-C:\Users\monak\Documents\GitHub\Gon-4-Buty-\Temp\bin\Debug\Cloo.dll
-C:\Users\monak\Documents\GitHub\Gon-4-Buty-\Temp\bin\Debug\Fluvio.Runtime.dll
-C:\Users\monak\Documents\GitHub\Gon-4-Buty-\Temp\bin\Debug\Fluvio.Runtime.xml

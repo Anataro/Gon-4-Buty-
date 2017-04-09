@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Gon 4 Buty/Sceny/Gon 4 Buty.unity
+- path: Assets/Trzeci tryb/Trzeci Tryb.unity
   isLoaded: 1
   isActive: 1
