@@ -11,6 +11,11 @@ TagManager:
   - Przeszkoda
   - Przedmiot
   - Respawner
+  - Talerz
+  - Kubek
+  - Szklanka
+  - Czajnik
+  - KieliszekDoWina
   layers:
   - Default
   - TransparentFX
