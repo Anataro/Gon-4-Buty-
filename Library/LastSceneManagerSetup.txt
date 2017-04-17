@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Trzeci tryb/Trzeci Tryb.unity
+- path: Assets/Tryb z rozbijaniem rzeczy/Tryb z rozbijaniem rzeczy PK.unity
   isLoaded: 1
   isActive: 1
