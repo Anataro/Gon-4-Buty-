@@ -7,6 +7,7 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 	private SterowanieGracz1 sterowanieGracz1Skrypt;
 	private int punkty1;
 	public bool punktZdobyty = false;
+	public Transform szklankaPK, kubekPK, kieliszekDoWinaPK, talerzPK, czajnikPK, szybaPK;
 
 	void Start (){
 		GameObject objekt = GameObject.Find ("GameManager");
@@ -16,40 +17,62 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 		sterowanieGracz1Skrypt = objekt2.GetComponent<SterowanieGracz1> ();
 	}
 
+	IEnumerator Zatrzymywanie (){
+		yield return new WaitForSeconds (0.5f);
+		sterowanieGracz1Skrypt.poruszanie = false;
+		sterowanieGracz1Skrypt.speed = 0.0f;
+	}
+
 	void OnCollisionEnter (Collision other){
-		if (other.gameObject.name != "Wyskocznia") {
-			sterowanieGracz1Skrypt.start = false;
+		if (other.gameObject.name != "Wyskocznia" && other.gameObject.tag != "Szyba" && other.gameObject.name != "Szafka") {
+			StartCoroutine (Zatrzymywanie());
 
-			if (other.gameObject.tag == "Szklanka" && other.gameObject.GetComponentInChildren<Rigidbody>().isKinematic == true) {
+			if (other.gameObject.tag == "Szklanka") {
 				gameManagerSkrypt.punktyG1 += 10;
 				punktZdobyty = true;
-				other.gameObject.GetComponentInChildren<Rigidbody> ().isKinematic = false;
+				Instantiate (szklankaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Instantiate (szklankaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Destroy (other.gameObject);
 			}
 
-			if (other.gameObject.tag == "Kubek" && other.gameObject.GetComponent<Rigidbody>().isKinematic == true) {
+			if (other.gameObject.tag == "Kubek") {
 				gameManagerSkrypt.punktyG1 += 10;
 				punktZdobyty = true;
-				other.gameObject.GetComponent<Rigidbody> ().isKinematic = false;
+				Instantiate (kubekPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Instantiate (kubekPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Destroy (other.gameObject);
 			}
 
-			if (other.gameObject.tag == "KieliszekDoWina"  && other.gameObject.GetComponentInChildren<Rigidbody> ().isKinematic == true) {
-				Debug.Log ("dziala");
+			if (other.gameObject.tag == "KieliszekDoWina") {
 				gameManagerSkrypt.punktyG1 += 20;
 				punktZdobyty = true;
-				other.gameObject.GetComponentInChildren<Rigidbody> ().isKinematic = false;
+					Instantiate (kieliszekDoWinaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+					Instantiate (kieliszekDoWinaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+					Destroy (other.gameObject);
 			}
 
-			if (other.gameObject.tag == "Talerz" && other.gameObject.GetComponent<Rigidbody>().isKinematic == true) {
+			if (other.gameObject.tag == "Talerz") {
 				gameManagerSkrypt.punktyG1 += 15;
 				punktZdobyty = true;
-				other.gameObject.GetComponent<Rigidbody> ().isKinematic = false;
+				Instantiate (talerzPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Destroy (other.gameObject);
 			}
 
-			if (other.gameObject.tag == "Czajnik" && other.gameObject.GetComponent<Rigidbody>().isKinematic == true) {
+			if (other.gameObject.tag == "Czajnik") {
 				gameManagerSkrypt.punktyG1 += 30;
 				punktZdobyty = true;
-				other.gameObject.GetComponent<Rigidbody> ().isKinematic = false;
+				Instantiate (czajnikPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Instantiate (czajnikPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Destroy (other.gameObject);
 			}
+		}
+	}
+
+	void OnTriggerEnter (Collider other){
+		if (other.gameObject.tag == "Szyba") {
+			Instantiate (szybaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+			Instantiate (szybaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+			Destroy (other.gameObject);
 		}
 	}
 }

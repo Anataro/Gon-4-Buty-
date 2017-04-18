@@ -17,6 +17,7 @@ TagManager:
   - Czajnik
   - KieliszekDoWina
   - Szyba
+  - Szafka
   layers:
   - Default
   - TransparentFX
