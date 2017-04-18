@@ -39,7 +39,7 @@ public class SterowanieGracz2 : MonoBehaviour {
 			if (Input.GetKey (KeyCode.UpArrow)) {
 				//Przyspieszanie.
 				if (speed < MaxSpeed) {
-					speed += 0.2f;
+					speed += 0.44f;
 				}
 			}
 			//Jeżeli gracz naciśnie strzałkę w dół.
@@ -53,10 +53,10 @@ public class SterowanieGracz2 : MonoBehaviour {
 			if (!Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.DownArrow)) {
 				//Zwalnianie.
 				if (speed > 0.0f) {
-					speed -= 0.2f;
+					speed -= 0.1f;
 				}
 				if (speed < 0.0f) {
-					speed += 0.2f;
+					speed += 0.1f;
 				}
 			}
 

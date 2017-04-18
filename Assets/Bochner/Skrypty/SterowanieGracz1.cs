@@ -39,7 +39,7 @@ public class SterowanieGracz1 : MonoBehaviour {
 			if (Input.GetKey (KeyCode.W)) {
 				//Przyspieszanie.
 				if (speed < MaxSpeed) {
-					speed += 0.2f;
+					speed += 0.44f;
 				}
 			}
 			//Jeżeli gracz naciśnie S.
@@ -53,10 +53,10 @@ public class SterowanieGracz1 : MonoBehaviour {
 			if (!Input.GetKey (KeyCode.W) && !Input.GetKey (KeyCode.S)) {
 				//Zwalnianie.
 				if (speed > 0.0f) {
-					speed -= 0.2f;
+					speed -= 0.1f;
 				}
 				if (speed < 0.0f) {
-					speed += 0.2f;
+					speed += 0.1f;
 				}
 			}
 

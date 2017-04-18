@@ -16,6 +16,7 @@ TagManager:
   - Szklanka
   - Czajnik
   - KieliszekDoWina
+  - Szyba
   layers:
   - Default
   - TransparentFX
