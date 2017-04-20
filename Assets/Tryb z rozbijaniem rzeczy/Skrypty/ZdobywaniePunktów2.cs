@@ -29,7 +29,7 @@ public class ZdobywaniePunktów2 : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision other){
-		if (other.gameObject.name != "Wyskocznia" && other.gameObject.tag != "Szyba" && other.gameObject.name != "Szafka") {
+		if (other.gameObject.name != "Wyskocznia" && other.gameObject.tag != "Szyba" && other.gameObject.name != "Szafka" && other.gameObject.tag != "Gracz1") {
 			StartCoroutine (Zatrzymywanie());
 
 			if (other.gameObject.tag == "Szklanka") {

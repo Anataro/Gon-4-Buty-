@@ -1,14 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Bochner\Skrypty\SterowanieGracz1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Tryb z rozbijaniem rzeczy\Skrypty\GameManager4.cs">
     <Files>
-      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZdobywaniePunktów1.cs" Line="32" Column="154" />
-      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZdobywaniePunktów2.cs" Line="21" Column="50" />
-      <File FileName="Assets\Bochner\Skrypty\SterowanieGracz1.cs" Line="21" Column="23" />
+      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZdobywaniePunktów1.cs" Line="32" Column="189" />
+      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZdobywaniePunktów2.cs" Line="32" Column="155" />
+      <File FileName="Assets\Bochner\Skrypty\SterowanieGracz1.cs" Line="1" Column="1" />
       <File FileName="Assets\Bochner\Skrypty\SterowanieGracz2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZmianaModelu.cs" Line="6" Column="78" />
-      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\GameManager4.cs" Line="58" Column="60" />
-      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\Respawn3.cs" Line="33" Column="61" />
+      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZmianaModelu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\GameManager4.cs" Line="21" Column="32" />
+      <File FileName="Assets\Tryb z rozbijaniem rzeczy\Skrypty\Respawn3.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -5732,7 +5732,7 @@ MonoBehaviour:
   gracz2p: {fileID: 1029377678}
   punktyG1: 0
   punktyG2: 0
-  iloscRund: 5
+  iloscRund: 2
 --- !u!114 &1432514877
 MonoBehaviour:
   m_ObjectHideFlags: 0

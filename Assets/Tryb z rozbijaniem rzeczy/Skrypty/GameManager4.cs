@@ -17,7 +17,8 @@ public class GameManager4 : MonoBehaviour {
 	[HideInInspector]
 	public int punktyG1, punktyG2;
 	public int iloscRund;
-	private int nrRundy = 1;
+	private int nrRundy = 1, ostatniaRunda;
+	private bool koniecGry = false;
 
 	private ZdobywaniePunktów1 zdobywaniePunktów1Skrypt;
 	private ZdobywaniePunktów2 zdobywaniePunktów2Skrypt;
@@ -29,6 +30,8 @@ public class GameManager4 : MonoBehaviour {
 	void Awake () {
 		gracz1 = gracz1p;
 		gracz2 = gracz2p;
+
+		ostatniaRunda = iloscRund;
 	}
 
 	void Start(){
@@ -61,10 +64,16 @@ public class GameManager4 : MonoBehaviour {
 			Application.Quit ();
 		}
 
+		if (nrRundy == ostatniaRunda)
+			koniecGry = true;
+
 		punkty1.text = "Punkty:" + punktyG1.ToString ();
 		punkty2.text = "Punkty:" + punktyG2.ToString ();
 
-		if (zdobywaniePunktów1Skrypt.punktZdobyty == true && zdobywaniePunktów2Skrypt.punktZdobyty == true) {
+		if (zdobywaniePunktów1Skrypt.punktZdobyty == true && zdobywaniePunktów2Skrypt.punktZdobyty == true && koniecGry == true)
+			StartCoroutine (kończenieGry());
+
+		if (zdobywaniePunktów1Skrypt.punktZdobyty == true && zdobywaniePunktów2Skrypt.punktZdobyty == true && koniecGry == false) {
 			następnaRunda.text = "Wciśnij 'spację', aby rozpocząć następną rundę";
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				nrRundy++;
@@ -84,10 +93,26 @@ public class GameManager4 : MonoBehaviour {
 		}
 	}
 
+	IEnumerator kończenieGry(){
+		yield return new WaitForSeconds (3);
+
+			if (punktyG1 > punktyG2)
+				wyścigStart.text = "Wygrał gracz 1!";
+
+			if (punktyG2 > punktyG1)
+				wyścigStart.text = "Wygrał gracz 2!";
+
+			if (punktyG1 == punktyG2)
+				wyścigStart.text = "Remis!";
+	}
 
 	IEnumerator Odliczanie(){
 		yield return new WaitForSeconds(1);
-		wyścigStart.text = "Runda " + nrRundy.ToString ();
+		if (nrRundy != ostatniaRunda) {
+			wyścigStart.text = "Runda " + nrRundy.ToString ();
+		} else {
+			wyścigStart.text = "Ostatnia runda!";
+		}
 		yield return new WaitForSeconds(1);
 		wyścigStart.text = "3";
 		yield return new WaitForSeconds(1);
