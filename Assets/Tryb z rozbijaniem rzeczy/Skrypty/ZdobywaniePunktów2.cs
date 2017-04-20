@@ -7,7 +7,7 @@ public class ZdobywaniePunktów2 : MonoBehaviour {
 	private SterowanieGracz2 sterowanieGracz2Skrypt;
 	private int punkty2;
 	public bool punktZdobyty = false;
-	public Transform szklankaPK, kubekPK, kieliszekDoWinaPK, talerzPK, czajnikPK, szybaPK;
+	public Transform szklankaPK, kubekPK, kieliszekDoWinaPK, talerzPK, czajnikPK, szybaPK1, szybaPK2;
 
 	void Start (){
 		GameObject objekt = GameObject.Find ("GameManager");
@@ -15,6 +15,11 @@ public class ZdobywaniePunktów2 : MonoBehaviour {
 
 		GameObject objekt2 = GameObject.Find ("Gracz2TrybTrzeci");
 		sterowanieGracz2Skrypt = objekt2.GetComponent<SterowanieGracz2> ();
+	}
+
+	void Update (){
+		if (sterowanieGracz2Skrypt.poruszanie == false)
+			punktZdobyty = true;
 	}
 
 	IEnumerator Zatrzymywanie (){
@@ -62,16 +67,19 @@ public class ZdobywaniePunktów2 : MonoBehaviour {
 				gameManagerSkrypt.punktyG2 += 30;
 				punktZdobyty = true;
 				Instantiate (czajnikPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
-				Instantiate (czajnikPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
 				Destroy (other.gameObject);
 			}
 		}
 	}
 
 	void OnTriggerEnter (Collider other){
-		if (other.gameObject.tag == "Szyba") {
-			Instantiate (szybaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
-			Instantiate (szybaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+		if (other.gameObject.name == "Szyba1") {
+			Instantiate (szybaPK1, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+			Destroy (other.gameObject);
+		}
+
+		if (other.gameObject.name == "Szyba2") {
+			Instantiate (szybaPK2, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
 			Destroy (other.gameObject);
 		}
 	}

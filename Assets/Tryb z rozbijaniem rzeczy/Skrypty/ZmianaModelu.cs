@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ZmianaModelu : MonoBehaviour {
-	public Transform szklankaPK, kubekPK, kieliszekDoWinaPK, talerzPK, czajnikPK, szybaPK;
+	public Transform szklankaPK, kubekPK, kieliszekDoWinaPK, talerzPK, czajnikPK;
 
 	void OnCollisionEnter (Collision other){
 			if (other.gameObject.tag == "Szklanka") {

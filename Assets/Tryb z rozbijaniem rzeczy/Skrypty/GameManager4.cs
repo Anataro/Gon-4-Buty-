@@ -6,6 +6,7 @@ public class GameManager4 : MonoBehaviour {
 	public GUIText wyścigStart;
 	public GUIText koniec;
 	public GUIText punkty1, punkty2;
+	public GUIText następnaRunda;
 
 	public GameObject gracz1p;
 	public GameObject gracz2p;
@@ -13,16 +14,43 @@ public class GameManager4 : MonoBehaviour {
 	private GameObject gracz1;
 	private GameObject gracz2;
 
+	[HideInInspector]
 	public int punktyG1, punktyG2;
+	public int iloscRund;
+	private int nrRundy = 1;
 
-	void Awake()
-	{
-		gracz1 = GameObject.Find (gracz1p.name);
-		gracz2 = GameObject.Find (gracz2p.name);
+	private ZdobywaniePunktów1 zdobywaniePunktów1Skrypt;
+	private ZdobywaniePunktów2 zdobywaniePunktów2Skrypt;
+	private Respawn3 respawnSkrypt;
+	private ZmianaKamery zmianaKamerySkrypt;
+	private SterowanieGracz1 sterowanieGracz1Skrypt;
+	private SterowanieGracz2 sterowanieGracz2Skrypt;
+
+	void Awake () {
+		gracz1 = gracz1p;
+		gracz2 = gracz2p;
 	}
 
 	void Start(){
 		StartCoroutine (Odliczanie ());
+
+		GameObject objekt = GameObject.Find ("Gracz1TrybTrzeci");
+		zdobywaniePunktów1Skrypt = objekt.GetComponent<ZdobywaniePunktów1> ();
+
+		GameObject objekt2 = GameObject.Find ("Gracz2TrybTrzeci");
+		zdobywaniePunktów2Skrypt = objekt2.GetComponent<ZdobywaniePunktów2> ();
+
+		GameObject objekt3 = GameObject.Find ("GameManager");
+		respawnSkrypt = objekt3.GetComponent<Respawn3> ();
+
+		GameObject objekt4 = GameObject.Find ("ZmieniaczKamery");
+		zmianaKamerySkrypt = objekt4.GetComponent<ZmianaKamery> ();
+
+		GameObject objekt5 = GameObject.Find ("Gracz1TrybTrzeci");
+		sterowanieGracz1Skrypt = objekt5.GetComponent<SterowanieGracz1> ();
+
+		GameObject objekt6 = GameObject.Find ("Gracz2TrybTrzeci");
+		sterowanieGracz2Skrypt = objekt6.GetComponent<SterowanieGracz2> ();
 	}
 
 	void Update () {
@@ -35,10 +63,31 @@ public class GameManager4 : MonoBehaviour {
 
 		punkty1.text = "Punkty:" + punktyG1.ToString ();
 		punkty2.text = "Punkty:" + punktyG2.ToString ();
+
+		if (zdobywaniePunktów1Skrypt.punktZdobyty == true && zdobywaniePunktów2Skrypt.punktZdobyty == true) {
+			następnaRunda.text = "Wciśnij 'spację', aby rozpocząć następną rundę";
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				nrRundy++;
+				respawnSkrypt.Resp (gracz1, 1);
+				respawnSkrypt.Resp (gracz2, 2);
+				StartCoroutine (Odliczanie ());
+				zmianaKamerySkrypt.camWidok1.enabled = false;
+				zmianaKamerySkrypt.camWidok2.enabled = false;
+				zmianaKamerySkrypt.camG1.enabled = true;
+				zmianaKamerySkrypt.camG2.enabled = true;
+				zdobywaniePunktów1Skrypt.punktZdobyty = false;
+				zdobywaniePunktów2Skrypt.punktZdobyty = false;
+				sterowanieGracz1Skrypt.poruszanie = true;
+				sterowanieGracz2Skrypt.poruszanie = true;
+				następnaRunda.text = "";
+			}
+		}
 	}
 
 
 	IEnumerator Odliczanie(){
+		yield return new WaitForSeconds(1);
+		wyścigStart.text = "Runda " + nrRundy.ToString ();
 		yield return new WaitForSeconds(1);
 		wyścigStart.text = "3";
 		yield return new WaitForSeconds(1);

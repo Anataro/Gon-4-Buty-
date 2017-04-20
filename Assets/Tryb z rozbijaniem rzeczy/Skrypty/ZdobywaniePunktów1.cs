@@ -7,7 +7,7 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 	private SterowanieGracz1 sterowanieGracz1Skrypt;
 	private int punkty1;
 	public bool punktZdobyty = false;
-	public Transform szklankaPK, kubekPK, kieliszekDoWinaPK, talerzPK, czajnikPK, szybaPK;
+	public Transform szklankaPK, kubekPK, kieliszekDoWinaPK, talerzPK, czajnikPK, szybaPK1, szybaPK2;
 
 	void Start (){
 		GameObject objekt = GameObject.Find ("GameManager");
@@ -17,6 +17,11 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 		sterowanieGracz1Skrypt = objekt2.GetComponent<SterowanieGracz1> ();
 	}
 
+	void Update (){
+		if (sterowanieGracz1Skrypt.poruszanie == false)
+			punktZdobyty = true;
+	}
+
 	IEnumerator Zatrzymywanie (){
 		yield return new WaitForSeconds (0.5f);
 		sterowanieGracz1Skrypt.poruszanie = false;
@@ -24,7 +29,7 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision other){
-		if (other.gameObject.name != "Wyskocznia" && other.gameObject.tag != "Szyba" && other.gameObject.name != "Szafka") {
+		if (other.gameObject.name != "Wyskocznia" && other.gameObject.tag != "Szyba" && other.gameObject.name != "Szafka" && other.gameObject.tag != "Untagged") {
 			StartCoroutine (Zatrzymywanie());
 
 			if (other.gameObject.tag == "Szklanka") {
@@ -46,9 +51,9 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 			if (other.gameObject.tag == "KieliszekDoWina") {
 				gameManagerSkrypt.punktyG1 += 20;
 				punktZdobyty = true;
-					Instantiate (kieliszekDoWinaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
-					Instantiate (kieliszekDoWinaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
-					Destroy (other.gameObject);
+				Instantiate (kieliszekDoWinaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Instantiate (kieliszekDoWinaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+				Destroy (other.gameObject);
 			}
 
 			if (other.gameObject.tag == "Talerz") {
@@ -62,16 +67,19 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 				gameManagerSkrypt.punktyG1 += 30;
 				punktZdobyty = true;
 				Instantiate (czajnikPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
-				Instantiate (czajnikPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
 				Destroy (other.gameObject);
 			}
 		}
 	}
 
 	void OnTriggerEnter (Collider other){
-		if (other.gameObject.tag == "Szyba") {
-			Instantiate (szybaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
-			Instantiate (szybaPK, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+		if (other.gameObject.name == "Szyba1") {
+			Instantiate (szybaPK1, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
+			Destroy (other.gameObject);
+		}
+
+		if (other.gameObject.name == "Szyba2") {
+			Instantiate (szybaPK2, new Vector3 (other.gameObject.transform.position.x, other.gameObject.transform.position.y, other.gameObject.transform.position.z), Quaternion.identity);
 			Destroy (other.gameObject);
 		}
 	}

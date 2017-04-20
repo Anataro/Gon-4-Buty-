@@ -12,7 +12,7 @@ public class Respawn2 : MonoBehaviour {
 
 	public float gracz1X, gracz1Y, gracz1Z, gracz2X, gracz2Y, gracz2Z;
 
-	void Start () {
+	void Awake () {
 		gracz1 = gracz1p;
 		gracz2 = gracz2p;
 	}
@@ -25,7 +25,7 @@ public class Respawn2 : MonoBehaviour {
 				Resp (gracz2, 2);
 	}
 
-	void Resp(GameObject gracz, int n)
+	public void Resp(GameObject gracz, int n)
 	{
 		if (n == 1) 
 		{
