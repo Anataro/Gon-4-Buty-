@@ -73,11 +73,11 @@
      <Compile Include="Assets\Tryb z rozbijaniem rzeczy\Skrypty\Respawn3.cs" />
      <Compile Include="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZdobywaniePunktów1.cs" />
      <Compile Include="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZdobywaniePunktów2.cs" />
+     <Compile Include="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZmianaKamery.cs" />
      <Compile Include="Assets\Tryb z rozbijaniem rzeczy\Skrypty\ZmianaModelu.cs" />
      <Compile Include="Assets\Trzeci tryb\Skrypty\GameManager3.cs" />
      <Compile Include="Assets\Trzeci tryb\Skrypty\LicznikPunktów1.cs" />
      <Compile Include="Assets\Trzeci tryb\Skrypty\LicznikPunktów2.cs" />
-     <Compile Include="Assets\Trzeci tryb\Skrypty\ZmianaKamery.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

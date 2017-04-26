@@ -108,7 +108,7 @@ MonoBehaviour:
   m_MinSize: {x: 613, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 1
-  controlID: 9
+  controlID: 21
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 613, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 10
+  controlID: 22
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -421,9 +421,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 341.05972, y: -5.382965, z: -641.9466}
+    m_Target: {x: 406.0866, y: 38.42447, z: -593.65}
     speed: 2
-    m_Value: {x: 341.05972, y: -5.382965, z: -641.9466}
+    m_Value: {x: 406.0866, y: 38.42447, z: -593.65}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -446,13 +446,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.19373709, y: 0.6107511, z: -0.15747347, w: -0.75143284}
+    m_Target: {x: -0.25755233, y: 0.076706745, z: -0.020520952, w: -0.96299624}
     speed: 2
-    m_Value: {x: -0.19373709, y: 0.6107511, z: -0.15747346, w: -0.75143284}
+    m_Value: {x: -0.25755233, y: 0.076706745, z: -0.020520952, w: -0.96299624}
   m_Size:
-    m_Target: 413.63467
+    m_Target: 328.1947
     speed: 2
-    m_Value: 413.63467
+    m_Value: 328.1947
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -553,7 +553,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Tryb z rozbijaniem rzeczy/Skrypty
+    - Assets/Tryb z rozbijaniem rzeczy
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -589,24 +589,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 15}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000362500003a2500004c2500006c27000076290000b6290000fc290000022a0000562a0000823600008436000086360000883600008a3600008c3600008e36000090360000923600009436000096360000983600009a3600009c3600009e360000a0360000a2360000a4360000a6360000a8360000aa360000ac360000ae360000b0360000b2360000b4360000b6360000
+    m_ExpandedIDs: 00000000362500003a2500004c2500006c270000b6290000562a0000823600008436000086360000883600008a3600008c3600008e36000090360000923600009436000096360000983600009a3600009c3600009e360000a0360000a2360000a4360000a6360000a8360000aa360000ac360000ae360000b0360000b2360000b4360000b6360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: ZmianaModelu
+      m_OriginalName: ZmianaModelu
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 1682
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 

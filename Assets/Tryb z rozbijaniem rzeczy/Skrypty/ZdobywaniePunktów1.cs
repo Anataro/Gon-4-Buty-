@@ -16,11 +16,7 @@ public class ZdobywaniePunktów1 : MonoBehaviour {
 		GameObject objekt2 = GameObject.Find ("Gracz1TrybTrzeci");
 		sterowanieGracz1Skrypt = objekt2.GetComponent<SterowanieGracz1> ();
 	}
-
-	void Update (){
-		if (sterowanieGracz1Skrypt.poruszanie == false)
-			punktZdobyty = true;
-	}
+		
 
 	IEnumerator Zatrzymywanie (){
 		yield return new WaitForSeconds (0.5f);

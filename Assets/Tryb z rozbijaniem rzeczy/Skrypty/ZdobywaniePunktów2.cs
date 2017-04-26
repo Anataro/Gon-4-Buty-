@@ -17,11 +17,6 @@ public class ZdobywaniePunktów2 : MonoBehaviour {
 		sterowanieGracz2Skrypt = objekt2.GetComponent<SterowanieGracz2> ();
 	}
 
-	void Update (){
-		if (sterowanieGracz2Skrypt.poruszanie == false)
-			punktZdobyty = true;
-	}
-
 	IEnumerator Zatrzymywanie (){
 		yield return new WaitForSeconds (0.5f);
 		sterowanieGracz2Skrypt.poruszanie = false;

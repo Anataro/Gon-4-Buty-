@@ -80,6 +80,8 @@ public class GameManager4 : MonoBehaviour {
 				respawnSkrypt.Resp (gracz1, 1);
 				respawnSkrypt.Resp (gracz2, 2);
 				StartCoroutine (Odliczanie ());
+				zmianaKamerySkrypt.spowalnianieG1 = false;
+				zmianaKamerySkrypt.spowalnianieG2 = false;
 				zmianaKamerySkrypt.camWidok1.enabled = false;
 				zmianaKamerySkrypt.camWidok2.enabled = false;
 				zmianaKamerySkrypt.camG1.enabled = true;
@@ -89,6 +91,7 @@ public class GameManager4 : MonoBehaviour {
 				sterowanieGracz1Skrypt.poruszanie = true;
 				sterowanieGracz2Skrypt.poruszanie = true;
 				następnaRunda.text = "";
+
 			}
 		}
 	}
